@@ -1,0 +1,47 @@
+Projeto Arcevo Digital
+
+Banco de dados
+
+criar tabela
+CREATE database arcevo_digital;
+
+inserir livros
+INSERT INTO Livros (nome, quantidade, autor, editora, ano_lancamento) VALUES
+('Dom Quixote', 5, 'Miguel de Cervantes', 'Editora A', 1605),
+('1984', 4, 'George Orwell', 'Editora B', 1949),
+('O Pequeno Príncipe', 6, 'Antoine de Saint-Exupéry', 'Editora C', 1943),
+('Os Lusíadas', 3, 'Luís de Camões', 'Editora D', 1572),
+('Orgulho e Preconceito', 4, 'Jane Austen', 'Editora E', 1813),
+('A Revolução dos Bichos', 7, 'George Orwell', 'Editora B', 1945),
+('O Senhor dos Anéis', 2, 'J.R.R. Tolkien', 'Editora F', 1954),
+('O Hobbit', 3, 'J.R.R. Tolkien', 'Editora F', 1937),
+('Harry Potter e a Pedra Filosofal', 5, 'J.K. Rowling', 'Editora G', 1997),
+('A Metamorfose', 6, 'Franz Kafka', 'Editora H', 1915);
+
+inserir alunos
+INSERT INTO Alunos (matricula, nome, cpf, data_nascimento) VALUES
+('1', 'João Silva', '12345678901', '2005-05-10'),
+('2', 'Maria Oliveira', '98765432102', '2004-07-15'),
+('3', 'Pedro Santos', '45678912303', '2006-02-22'),
+('4', 'Ana Costa', '78912345604', '2005-11-30'),
+('5', 'Lucas Pereira', '32165498705', '2007-08-19'),
+('6', 'Carla Almeida', '65432198706', '2004-12-25'),
+('7', 'Marcos Andrade', '78965412307', '2005-01-05'),
+('8', 'Paula Souza', '12378945608', '2006-06-14'),
+('9', 'Rafael Lima', '98732165409', '2007-03-21'),
+('10', 'Camila Ribeiro', '45698712310', '2004-10-08');
+
+
+dependencias 
+
+node -v
+npm -v
+npm init -y
+npm install express sequelize mysql2 dotenv bcrypt jsonwebtoken
+npm install express sequelize mysql2 dotenv body-parser
+npm install cors
+npm install --save-dev nodemon eslint
+
+
+
+
