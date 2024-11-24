@@ -1,0 +1,143 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo do cabeçalho */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #446ce0;
+  padding: 10px 20px; /* Diminuir a altura do cabeçalho */
+  display: flex;
+  justify-content: space-between; /* Alinha a logo à esquerda e o título à direita */
+  align-items: center;
+  border-bottom: 2px solid #a3b0ff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Logo no cabeçalho */
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 105px;  
+  width: 130px;   
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.5);
+}
+
+/* Adicionando o efeito de transformação à imagem vetorial */
+.imgVetor1 {
+  transition: transform 0.3s ease; /* Mesma transição para a imagem vetorial */
+  position: relative; /* Permite controlar o z-index */
+}
+
+.imgVetor1:hover {
+  transform: scale(1.5); /* Aumento do tamanho da imagem */
+}
+
+/* Título no cabeçalho */
+.header h1 {
+  color: white;
+  font-size: 1.6rem;
+  text-align: right;
+  margin-left: -15px; /* Deslocamento mais acentuado */
+  width: auto;  /* Garantir que o título não seja restringido */
+}
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e6eaff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative; /* Certifique-se de que o body tenha um contexto de empilhamento */
+}
+
+/* Formulário de login */
+.login-container {
+  background: #8399f5;
+  padding: 20px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative; /* Permite controle de empilhamento */
+  z-index: 5; /* Garante que o formulário fique acima da imagem */
+  transition: transform 0.3s ease; /* Permite que o formulário se mova */
+}
+
+/* Efeito de mover o formulário quando o mouse passar sobre a imagem */
+.imgVetor1:hover + .login-container {
+  transform: translateX(200px); /* Move o formulário 200px para a direita */
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaac97;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  display: none;
+}
+
+#success-message {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+  display: none;
+}

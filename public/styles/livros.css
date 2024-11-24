@@ -1,0 +1,218 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo do cabeçalho */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #446ce0;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between; /* Logo e navbar à esquerda */
+  align-items: center;
+  border-bottom: 2px solid #8c84f3;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Área da logo e navegação */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 105px;
+  width: 130px;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.5);
+}
+
+
+.livro-vt {
+  height: 105px;  
+  width: 130px;   
+  transition: transform 0.3s ease;
+}
+
+.livro-vt:hover {
+  transform: scale(2.5);
+}
+
+
+/* Navegação */
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #0056b3;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #0056b3;
+}
+
+.navbar a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #0056b3;
+  transition: width 0.3s;
+}
+
+.navbar li {
+    padding: 12px;
+    margin: 8px 0;
+    background: #f1f3f8; /* Cor de fundo padrão dos itens */
+    border-radius: 6px;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* Estilo do container */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 120px; /* Ajuste para garantir que o conteúdo não fique sobre o cabeçalho */
+}
+
+h1 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Estilo da barra de busca */
+.search-container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.search-container input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-container button {
+  padding: 10px 15px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo da lista de livros */
+.list-books {
+  margin-top: 20px;
+  height: 400px; /* Defina uma altura fixa para a lista */
+  overflow-y: auto; /* Permite a rolagem apenas na lista */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.list-header {
+  display: grid;
+  grid-template-columns: 2.2fr 2.3fr 2.7fr 2fr 1fr 1fr; /* Distribui as colunas proporcionalmente */
+  font-weight: bold;
+  color: white;
+  background-color: #2455d6;
+  padding: 10px;
+}
+
+.list-books h2 span {
+  text-align: center;
+}
+
+.list-books ul {
+  list-style: none;
+  padding: 0;
+}
+
+.list-books li {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr 1fr 1fr;
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.list-books li span {
+  text-align: center;
+}
+
+/* Estilo do botão de ação (ex: Emprestar) */
+.list-books li button {
+  padding: 8px 12px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.list-books li button:hover {
+  background: #218838;
+}
+
+/* Estilo específico para a imagem ao lado do título 'Lista de Livros' */
+.list-header-container {
+  display: flex;
+  justify-content: space-between; /* Garante que a imagem e o título fiquem na mesma linha */
+  align-items: center;
+  gap: 10px; /* Espaçamento entre o título e a imagem */
+}
+
+.livro-vt {
+  height: 40px; /* Ajuste o tamanho da imagem */
+  width: auto;
+}

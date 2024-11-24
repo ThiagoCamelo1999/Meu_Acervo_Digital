@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesquisa de Livros</title>
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    
+    <header class="header">
+      <div class="logo">
+        <a href="livros.html">
+          <img src="./imagens/logo.png" alt="Logo" class="logo-img">
+        </a>
+      </div>
+      <h1>Gerenciamento de Pesquisas</h1>
+      <div class="navbar">
+        <ul>
+          <li><a href="livros.html">Patreleira de Livros</a></li>
+          <li><a href="emprestimos.html">Emprestimos</a></li>
+        </ul>
+      </div>
+</header>
+
+  <div class="container">
+    <h1>Pesquisa de Livros</h1>
+
+    <!-- Formulário de pesquisa -->
+    <form id="searchLivroByTitleForm">
+      <div class="search-container">
+        <input type="text" id="livroTitulo" placeholder="Digite o título do livro" required>
+        <button type="submit">Pesquisar</button>
+        <img src="./imagens/pesquisa de livros.png" alt="pesquisaImg" class="pesquisa-img">
+      </div>
+    </form>
+
+    <!-- Resultados -->
+    <div class="list-books">
+      <div class="list-header" id="list-header">
+        <span>ID</span>
+        <span>Nome</span>
+        <span>Autor</span>
+        <span>Editora</span>
+        <span>Ano de Lançamento</span>
+        <span>Quantidade</span>
+      </div>
+      <div id="results"></div>
+    </div>
+    <div class="error-message" id="error-message"></div>
+  </div>
+
+  <script src="scripts/index.js"></script>
+</body>
+</html>

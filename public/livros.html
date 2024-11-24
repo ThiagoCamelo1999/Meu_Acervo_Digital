@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livros - Arquivo Digital</title>
+  <link rel="stylesheet" href="styles/livros.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="livros.html">
+        <img src="./imagens/logo.png" alt="Logo" class="logo-img">
+      </a>
+    </div>
+    <h1>Gerenciamento de Livros</h1>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Pesquisa de Livros</a></li>
+        <li><a href="emprestimos.html">Empréstimos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Contêiner com título e imagem -->
+    <div class="list-header-container">
+      <h2>Lista de Livros</h2>
+      <img src="./imagens/livroVetorial2.svg" alt="livroVt" class="livro-vt">
+    </div>
+
+    <!-- Tabela de livros -->
+    <div class="list-books">
+      <div class="list-header">
+        <span>Id</span>
+        <span>Título</span>
+        <span>Autor</span>
+        <span>Editora</span>
+        <span>Ano de Lançamento</span>
+        <span>Quantidade</span>
+      </div>
+      <ul id="bookList">
+        <!-- Os livros serão listados aqui -->
+      </ul>
+    </div>
+  </div>
+
+  <script src="scripts/livros.js"></script>
+</body>
+</html>

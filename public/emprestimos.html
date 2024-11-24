@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciar Empréstimos</title>
+  <link rel="stylesheet" href="styles/emprestimos.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="livros.html">
+        <img src="./imagens/logo.png" alt="Logo" class="logo-img">
+      </a>
+    </div>
+    <h1>Gerenciamento de Empréstimos</h1>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Pesquisa de Livros</a></li>
+        <li><a href="livros.html">Patreleira de Livros</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main class="container">
+  
+
+    <section class="create-loan">
+      <h2>Registrar Empréstimo</h2>
+      <form id="createLoanForm">
+        <label for="matricula">Matrícula do Aluno:</label>
+        <input type="text" id="matricula" name="matricula" required>
+    
+        <label for="livroId">ID do Livro:</label>
+        <input type="text" id="livroId" name="livroId" required>
+    
+        <button type="submit">Registrar Empréstimo</button>
+      </form>
+      <img src="./imagens/emprestimo.png" alt="Empréstimo" class="emprestimo-img">
+      <p id="create-loan-message"></p>
+    </section>
+    
+
+
+    <!-- Lista de empréstimos -->
+    <section class="list-loans">
+      <h2>
+        <span>Nome do Aluno</span>
+        <span>Nome do Livro</span>
+        <span>Status</span>
+        <span>Ações</span>
+      </h2>
+      <ul id="loan-list">
+        <!-- Os empréstimos serão listados aqui -->
+      </ul>
+    </section>
+  </main>
+
+  <script src="scripts/emprestimos.js"></script>
+</body>
+</html>
