@@ -61,10 +61,6 @@ exports.devolverEmprestimo = async (req, res) => {
   }
 };
 
-
-
-
-
 // Buscar todos os empréstimos
 exports.getAllEmprestimos = async (req, res) => {
   try {
@@ -85,7 +81,6 @@ exports.getAllEmprestimos = async (req, res) => {
     res.status(500).json({ error: 'Erro ao buscar empréstimos' });
   }
 };
-
 
 // Buscar empréstimos pelo nome do aluno
 exports.getEmprestimosByAluno = async (req, res) => {

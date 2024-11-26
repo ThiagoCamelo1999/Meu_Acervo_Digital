@@ -4,39 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pesquisa de Livros</title>
-  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/emprestimosPesquisa.css">
 </head>
 <body>
-    
-    <header class="header">
-      <div class="logo">
-        <a href="livros.html">
-          <img src="./imagens/logo.png" alt="Logo" class="logo-img">
-        </a>
-      </div>
-      <h1>Gerenciamento de Pesquisas</h1>
-      <div class="navbar">
-        <ul>
-          <li><a href="livros.html">Patreleira de Livros</a></li>
-          <li><a href="emprestimos.html">Emprestimos</a></li>
-        </ul>
-      </div>
-</header>
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="./imagens/logo.png" alt="Logo" class="logo-img">
+      </a>
+    </div>
+    <h1>Pesquisa de Livros</h1>
+    <div class="navbar">
+      <ul>
+        <li><a href="livros.html">Prateleira de Livros</a></li>
+        <li><a href="emprestimos.html">Gerenciar Empréstimos</a></li>
+        <li><a href="pesquisaEmprestimos.html">Pesquisa de Empréstimos</a></li>
+      </ul>
+    </div>
+  </header>
 
   <div class="container">
-    <h1>Pesquisa de Livros</h1>
+    <h1>Pesquisar Livros</h1>
+
+    <!-- Seletor de tipo de pesquisa -->
+    <div class="search-options">
+      <label>
+        <input type="radio" name="searchType" value="titulo" checked>
+        Por Título
+      </label>
+      <label>
+        <input type="radio" name="searchType" value="autor">
+        Por Autor
+      </label>
+    </div>
 
     <!-- Formulário de pesquisa -->
-    <form id="searchLivroByTitleForm">
+    <form id="searchLivroForm">
       <div class="search-container">
-        <input type="text" id="livroTitulo" placeholder="Digite o título do livro" required>
+        <input type="text" id="searchInput" placeholder="Digite o título ou autor do livro" required>
         <button type="submit">Pesquisar</button>
-        <img src="./imagens/pesquisa de livros.png" alt="pesquisaImg" class="pesquisa-img">
+        <img src="./imagens/pesquisa de livros.png" alt="Ícone de Pesquisa" class="pesquisa-img">
       </div>
     </form>
 
     <!-- Resultados -->
-    <div class="list-books">
+    <div class="list-loans">
       <div class="list-header" id="list-header">
         <span>ID</span>
         <span>Nome</span>
@@ -45,8 +57,9 @@
         <span>Ano de Lançamento</span>
         <span>Quantidade</span>
       </div>
-      <div id="results"></div>
+      <ul id="results"></ul>
     </div>
+
     <div class="error-message" id="error-message"></div>
   </div>
 

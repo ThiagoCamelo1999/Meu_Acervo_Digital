@@ -1,214 +1,153 @@
 /* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    /* Estilo do cabeçalho */
-    .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #446ce0;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid #8c84f3;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-    }
+/* Estilo do cabeçalho */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #446ce0;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #8c84f3;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
 
-    /* Área da logo e navegação */
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
+.header h1 {
+  color: #f1f3f8;
+}
 
-    .header h1 {
-        color: #f1f3f8;
-    }
+/* Navegação */
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
 
-    /* Logo */
-    .logo {
-      display: flex;
-      align-items: center;
-    }
+.navbar a {
+  text-decoration: none;
+  color: #0056b3;
+  font-weight: bold;
+  transition: color 0.3s;
+}
 
-    .logo-img {
-      height: 105px;
-      width: 130px;
-      transition: transform 0.3s ease;
-    }
+.navbar a:hover {
+  color: #0056b3;
+}
 
-    .logo-img:hover {
-      transform: scale(1.5);
-    }
+/* Estilo do container */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 120px;
+}
 
-    .pesquisa-img {
-      height: 30px;  
-      width: 100px;   
-      transition: transform 0.3s ease;
-    }
-    
-    .pesquisa-img:hover {
-      transform: scale(3);
-    }
+h1 {
+  color: #333;
+  margin-bottom: 15px;
+}
 
-    /* Navegação */
-    .navbar ul {
-      list-style-type: none;
-      display: flex;
-      gap: 20px;
-    }
+/* Estilo da barra de busca */
+.search-container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  gap: 10px;
+  justify-content: flex-start;
+}
 
-    .navbar li {
-      position: relative;
-    }
+.search-container input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 
-    .navbar a {
-      text-decoration: none;
-      color: #0056b3;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
+.search-container button {
+  padding: 10px 15px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-    .navbar a:hover {
-      color: #0056b3;
-    }
+.search-container button:hover {
+  background-color: #004a9e;
+}
 
-    .navbar a::after {
-      content: '';
-      display: block;
-      width: 0;
-      height: 2px;
-      background: #0056b3;
-      transition: width 0.3s;
-    }
+/* Estilo da lista de livros */
+.list-loans {
+  margin-top: 20px;
+  height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
-    .navbar li {
-      padding: 12px;
-      margin: 8px 0;
-      background: #f1f3f8;
-      border-radius: 6px;
-    }
+.list-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr 1.5fr 1.5fr; /* 6 colunas */
+  font-weight: bold;
+  color: white;
+  background-color: #2455d6;
+  padding: 10px;
+  visibility: hidden; /* Inicialmente invisível */
+}
 
-    .navbar a:hover::after {
-      width: 100%;
-    }
+.list-header span {
+  text-align: center;
+}
 
-    /* Estilo do container */
-    .container {
-      width: 80%;
-      margin: 0 auto;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      margin-top: 120px;
-    }
+.list-loans ul {
+  list-style: none;
+  padding: 0;
+}
 
-    h1 {
-      color: #333;
-      margin-bottom: 15px;
-    }
+.list-loans li {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr 1.5fr 1.5fr; /* Mesma configuração */
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  align-items: center;
+}
 
-    /* Estilo da barra de busca */
-    .search-container {
-      display: flex;
-      margin-top: 20px;
-      margin-bottom: 30px;
-      gap: 10px;
-      justify-content: flex-start;
-    }
+.list-loans li span {
+  text-align: center;
+}
 
-    .search-container input {
-      width: 80%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
+/* Botão de ação */
+.list-loans li button {
+  padding: 8px 12px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-    .search-container button {
-      padding: 10px 15px;
-      background-color: #0056b3;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
+.list-loans li button:hover {
+  background: #218838;
+}
 
-    .search-container button:hover {
-      background-color: #0056b3;
-    }
-
-    /* Estilo da lista de livros */
-    .list-books {
-      margin-top: 20px;
-      height: 400px;
-      overflow-y: auto;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .list-header {
-      display: grid;
-      grid-template-columns: 2fr 2fr 2.7fr 2fr 1.8fr 1.5fr; /* Distribui as colunas proporcionalmente */
-      font-weight: bold;
-      color: white;
-      background-color: #2455d6;
-      padding: 10px;
-      visibility: hidden; /* Inicialmente invisível */
-    }
-
-    .list-header span {
-      text-align: center;
-    }
-
-    .list-books ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .list-books li {
-      display: grid;
-      grid-template-columns: 1fr 2fr 2fr 2fr 1fr 1fr;
-      padding: 15px;
-      margin-bottom: 10px;
-      background: #f9f9f9;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      align-items: center;
-    }
-
-    .list-books li span {
-      text-align: center;
-    }
-
-    .list-books li button {
-      padding: 8px 12px;
-      background: #28a745;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .list-books li button:hover {
-      background: #218838;
-    }
-
-    .list-header-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .livro-vt {
-      height: 40px;
-      width: auto;
-    }
+/* Mensagem de erro */
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
