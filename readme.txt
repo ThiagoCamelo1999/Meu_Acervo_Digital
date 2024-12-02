@@ -1,6 +1,6 @@
-📚 Arcevo Digital
+📚 Acervo Digital
 
-Arcevo Digital é uma plataforma desenvolvida para modernizar a gestão de bibliotecas escolares, permitindo o controle de empréstimos, gerenciamento de alunos e organização de livros. Com uma interface simples e intuitiva, o sistema ajuda na administração eficiente do acervo literário e no acompanhamento de prazos de devolução.
+Acervo Digital é uma plataforma desenvolvida para modernizar a gestão de bibliotecas escolares, permitindo o controle de empréstimos, gerenciamento de alunos e organização de livros. Com uma interface simples e intuitiva, o sistema ajuda na administração eficiente do acervo literário e no acompanhamento de prazos de devolução.
 
 
 
@@ -120,7 +120,7 @@ Configuração do Administrador
 Segue uma versão ajustada da seção sobre o criador:
 
 👨‍💻 Sobre o Criador
-O Arcevo Digital foi idealizado e desenvolvido por Thiago Da Silva, um entusiasta da tecnologia e inovação, com foco em soluções para diversos setores. Com um pouco de experiência em desenvolvimento web e integração de sistemas, o criador dedicou-se a criar uma ferramenta que facilita o gerenciamento de bibliotecas escolares, promovendo organização e eficiência no cotidiano acadêmico.
+O Acervo Digital foi idealizado e desenvolvido por Thiago Da Silva, um entusiasta da tecnologia e inovação, com foco em soluções para diversos setores. Com um pouco de experiência em desenvolvimento web e integração de sistemas, o criador dedicou-se a criar uma ferramenta que facilita o gerenciamento de bibliotecas escolares, promovendo organização e eficiência no cotidiano acadêmico.
 
 Para dúvidas, sugestões ou parcerias, entre em contato:
 
